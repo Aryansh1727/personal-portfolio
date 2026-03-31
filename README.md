@@ -2,7 +2,7 @@
 
 A clean, responsive, and professional personal portfolio website built to showcase my academic projects, skills, and resume. 
 
-🔗 **Live Demo:** [Insert your Vercel URL here]
+🔗 **Live Demo:** https://aryan-personal-portfolio.vercel.app/
 
 ## 🚀 Features
 - **Responsive Design:** Optimized for mobile, tablet, and desktop viewing.
