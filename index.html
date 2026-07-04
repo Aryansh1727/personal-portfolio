@@ -90,9 +90,10 @@
 
         /* --- SECTIONS --- */
         section { padding: 6rem 0; }
-        .section-title { font-size: 2.25rem; margin-bottom: 3rem; text-align: center; color: var(--dark); }
-        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin: 0.75rem auto; border-radius: 2px; }
-
+        .section-title { font-size: 2.25rem; margin-bottom: 3rem; color: var(--dark); display: inline-block; position: relative; left: 50%; transform: translateX(-50%); }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin: 0.75rem auto 0; border-radius: 2px; transition: var(--transition); }
+        .section-title:hover::after { width: 100%; }
+        
         /* --- ABOUT & EDUCATION --- */
         .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
         
@@ -311,6 +312,12 @@
             color: var(--primary);
         }
 
+        .modal-content-wrapper video {
+            max-height: 75vh; 
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+        }
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
@@ -330,7 +337,11 @@
                 max-height: none;
                 width: 100%;
             }
-            
+            .modal-content-wrapper video {
+                max-height: none;
+                width: 100%;
+            }
+
             .about-text-container {
                 padding-left: 0;
             }
@@ -451,9 +462,9 @@
     <script>
         const PortfolioData = {
             name: "Aryan Bharadwaj",
-            tagline: "Computer Science student specializing in Cyber Security and Ethical Hacking.",
-            objective: "A passionate cybersecurity enthusiast with a strong interest in ethical hacking and system security. Focused on identifying vulnerabilities, understanding attack mechanisms, and implementing effective security measures. Actively learning and practicing cybersecurity concepts to build secure and reliable digital systems.",
-            interests: "Learning the basics of cybersecurity and ethical hacking and Understanding how common cyber attacks work.", 
+            tagline: "Computer Science student specializing in Software Engineering and Secure Application Development.",
+            objective: "A passionate Computer Science student focused on the intersection of Software Engineering and Cybersecurity. Driven to build responsive, multi-threaded applications while implementing secure-by-default code design, input sanitization, and defensive network controls.",
+            interests: "Secure Software Development (DevSecOps), Network Security Architecture, Penetration Testing, Cryptography, and Automation Frameworks.", 
             github: "https://github.com/Aryansh1727",
             linkedin: "https://www.linkedin.com/in/aryan-bharadwaj-403b35350/",
             email: "bharadwajaryan27@gmail.com",
@@ -464,24 +475,24 @@
             ],
             
             projects: [
-                {
-                    title: "Student Registration Form",
-                    desc: "A responsive dynamic web application designed to collect student enrollment data. It processes user inputs and safely appends records to a structured local CSV database for lightweight backend management.",
-                    tech: ["Python", "Html", "CSS"],
-                    links: { github: "https://github.com/Aryansh1727/registration" },
-                    demos: ["Screenshot 2025-07-04 112807.png"] 
-                },
-                {
-                    title: "Password Analyzer & Cracker Simulator",
-                    desc: "An educational cybersecurity tool built in Python and Java that evaluates password strength and simulates live brute-force attacks to demonstrate security vulnerabilities.",
-                    tech: ["Python", "Java"],
-                    links: { github: "https://github.com/Aryansh1727/Password-Strength-Analyzer-Cracker-Simulator" },
-                    demos: ["analyzer-output1.png", "analyzer-output2.png"] 
-                },
-            ],
+        {
+            title: "Password Analyzer & Cracker Simulator",
+            desc: "A comprehensive cybersecurity auditing tool developed using Python and Java. It features a multi-layered password strength evaluation engine and a simulated brute-force attack module. Designed to educate users on entropy, common attack vectors, and the necessity of secure hashing algorithms in modern application infrastructure.",
+            tech: ["Python", "Java"],
+            links: { github: "https://github.com/Aryansh1727/Password-Strength-Analyzer-Cracker-Simulator" },
+            demos: ["analyzer-output1.png", "analyzer-output2.png"] 
+        },
+        {
+            title: "Real-Time Desktop Chat Application",
+            desc: "A feature-rich real-time desktop chat application built with Python Sockets, Tkinter, and SQLite. Features a dual-mode dynamic theme (Dark/Light), active text keyword searching, live character constraints, and an integrated SQLite data audit utility.",
+            tech: ["Python", "Sockets (TCP)", "Tkinter GUI", "SQLite3", "Multi-threading"],
+            links: { github: "https://github.com/Aryansh1727/Chat-Application" },
+            demos: ["Screenshot 2026-07-04 130747.png"] 
+        },
+    ],
             
-            skills: ["C", "C++", "Python", "JavaScript", "HTML", "CSS","OOPS"],
-            learning: ["JAVA", "Kali Linux"]
+            skills: ["C", "C++", "Python", "HTML", "CSS", "JavaScript", "Git"],
+            learning: ["JAVA", "Linux Administration"]
         };
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -547,16 +558,35 @@
                 if(e.target && e.target.classList.contains('view-demo-btn')){
                     const projectIndex = e.target.getAttribute('data-project-index');
                     const project = PortfolioData.projects[projectIndex];
-                    
+                
                     modalWrapper.innerHTML = '';
-                    
-                    project.demos.forEach(imgSrc => {
-                        const img = document.createElement('img');
-                        img.src = imgSrc.trim();
-                        img.alt = `${project.title} Screenshot`;
-                        modalWrapper.appendChild(img);
+                
+                    project.demos.forEach(mediaSrc => {
+                        const srcTrimmed = mediaSrc.trim();
+                        // Check if the file is a video format
+                        const isVideo = srcTrimmed.endsWith('.mp4') || srcTrimmed.endsWith('.webm') || srcTrimmed.endsWith('.ogg');
+                        
+                        if (isVideo) {
+                            // Create a video element with custom controls
+                            const video = document.createElement('video');
+                            video.src = srcTrimmed;
+                            video.controls = true;
+                            video.autoplay = true; // Optional: plays automatically when opened
+                            video.muted = true;    // Standard practice for auto-playing web videos
+                            video.style.maxWidth = '100%';
+                            video.style.maxHeight = '75vh';
+                            video.style.borderRadius = 'var(--radius)';
+                            video.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.5)';
+                            modalWrapper.appendChild(video);
+                        } else {
+                            // Fallback to your existing image logic if it's a screenshot
+                            const img = document.createElement('img');
+                            img.src = srcTrimmed;
+                            img.alt = `${project.title} Screenshot`;
+                            modalWrapper.appendChild(img);
+                        }   
                     });
-                    
+        
                     modal.classList.add('show');
                 }
             });
@@ -577,12 +607,18 @@
             const navLinks = document.querySelectorAll('.nav-link');
             let current = '';
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 120) {
-                    current = section.getAttribute('id');
-                }
-            });
+            const reachedBottom = (window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight - 50;
+
+            if (reachedBottom) {
+                current = 'contact';
+            } else {
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 120) {
+                        current = section.getAttribute('id');
+                    }
+                });
+            }
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
