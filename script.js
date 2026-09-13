@@ -1,27 +1,45 @@
 const PortfolioData = {
     name: "Aryan Bharadwaj",
-    tagline: "Computer Science student specializing in Software Engineering and Secure Application Development.",
-    objective: "A passionate Computer Science student focused on the intersection of Software Engineering and Cybersecurity. Driven to build responsive, multi-threaded applications while implementing secure-by-default code design, input sanitization, and defensive network controls.",
-    interests: "Secure Software Development (DevSecOps), Network Security Architecture, Penetration Testing, Cryptography, and Automation Frameworks.", 
-    github: "https://github.com/Aryansh1727",
+    tagline: "Computer Science student focused on Software Engineering, Web Development, and Cybersecurity.", 
+    objective: "A Computer Science student focused on Software Engineering and Cybersecurity, with hands-on experience building web applications, REST APIs, and desktop applications. Passionate about developing practical, efficient, and secure software solutions.",    interests: "Web Development, Backend Development, Cybersecurity, REST API Development, Network Programming, Automation, and exploring modern software technologies.",    github: "https://github.com/Aryansh1727",
     linkedin: "https://www.linkedin.com/in/aryan-bharadwaj-403b35350/",
     email: "bharadwajaryan27@gmail.com",
     
     education: [
-        { title: "Bachelors in Computer Science", school: "Gurugram University (Haryana)", meta: "2024 — 2028 | CGPA: 7.5/10" },
+        { title: "Bachelors in Computer Science", school: "Gurugram University (Haryana)", meta: "2024 — 2028 | CGPA: 7.6/10" },
         { title: "Senior Secondary", school: "Public School Darbhanga (Bihar)", meta: "2022 — 2024 | 75.6%" }
     ],
 
     experience: [
-        { 
-            title: "Internshala Student Partner (ISP)", 
-            company: "Internshala", 
+        {
+            title: "Web Development Intern",
+            company: "BeeSkilled",
+            meta: "6 Weeks | Virtual | 2026",
+            desc: "Completed a 6-week web development internship, gaining practical experience in building responsive and interactive web projects using HTML, CSS, and JavaScript."
+        },
+        {
+            title: "Internshala Student Partner (ISP)",
+            company: "Internshala",
             meta: "June 2026 | Hybrid",
-            desc: "Results-driven Student Ambassador and campus leader skilled in digital marketing, community management, and peer networking. Proven track record of promoting professional upskilling opportunities, executing targeted promotional campaigns, and building valuable brand awareness within the student community." 
-        }   
+            desc: "Promoted Internshala's learning and internship opportunities among students, building communication, networking, and community engagement skills."
+        }
     ],
-    
+        
     projects: [
+        {
+            title: "Django Blog REST API",
+            desc: "Designed and developed a RESTful Blog API with Django REST Framework, enabling secure CRUD operations, authentication, filtering, search, ordering, and pagination. The project demonstrates backend development, API design, and clean code organization using Python and Django.",
+            tech: ["Python", "Django",  "SQLite", "Django REST Framework", "Django Filter"],
+            links: { github: "https://github.com/Aryansh1727/django-blog-rest-api" },
+            demos: ["admin.png", "login.png", "pagination_page1.png", "filter_post.png"] 
+        },
+        {
+            title: "Real-Time Desktop Chat Application",
+            desc: "A feature-rich real-time desktop chat application built with Python Sockets, Tkinter, and SQLite. Features a dual-mode dynamic theme (Dark/Light), active text keyword searching, live character constraints, and an integrated SQLite data audit utility.",
+            tech: ["Python", "Sockets (TCP)", "Tkinter GUI", "SQLite3", "Multi-threading"],
+            links: { github: "https://github.com/Aryansh1727/Chat-Application" },
+            demos: ["desktop-live-chat.png"] 
+        },
         {
             title: "SkyCast Weather",
             desc: "A responsive weather application that delivers real-time weather conditions, hourly forecasts, and location-based weather updates through a clean and intuitive interface. Designed to provide fast, accurate weather information with a seamless user experience.",
@@ -33,25 +51,11 @@ const PortfolioData = {
             demos: ["SkyCast-Front.png","SkyCast-output1.png","SkyCast-output2.png"]
         },
         {
-            title: "Real-Time Desktop Chat Application",
-            desc: "A feature-rich real-time desktop chat application built with Python Sockets, Tkinter, and SQLite. Features a dual-mode dynamic theme (Dark/Light), active text keyword searching, live character constraints, and an integrated SQLite data audit utility.",
-            tech: ["Python", "Sockets (TCP)", "Tkinter GUI", "SQLite3", "Multi-threading"],
-            links: { github: "https://github.com/Aryansh1727/Chat-Application" },
-            demos: ["desktop-live-chat.png"] 
-        },
-        {
             title: "Password Analyzer & Cracker Simulator",
             desc: "A comprehensive cybersecurity auditing tool developed using Python and Java. It features a multi-layered password strength evaluation engine and a simulated brute-force attack module. Designed to educate users on entropy, common attack vectors, and the necessity of secure hashing algorithms in modern application infrastructure.",
             tech: ["Python", "Java"],
             links: { github: "https://github.com/Aryansh1727/Password-Strength-Analyzer-Cracker-Simulator" },
             demos: ["analyzer-output1.png", "analyzer-output2.png"] 
-        },
-        {
-            title: "Django Blog REST API",
-            desc: "Designed and developed a RESTful Blog API with Django REST Framework, enabling secure CRUD operations, authentication, filtering, search, ordering, and pagination. The project demonstrates backend development, API design, and clean code organization using Python and Django.",
-            tech: ["Python", "Django",  "SQLite", "Django REST Framework", "Django Filter"],
-            links: { github: "https://github.com/Aryansh1727/django-blog-rest-api" },
-            demos: ["admin.png", "login.png", "pagination_page1.png", "filter_post.png"] 
         },
     ],
 
@@ -63,6 +67,14 @@ const PortfolioData = {
             skills: ["Python", "OOP", "File Handling", "Modules", "Django"],
             id: "TD-ARYA-PY-1754",
             link: "https://drive.google.com/file/d/1_TLR7nRnNo0XfND8ZLd0c9vNXJ6hkmYr/view?usp=drive_link"
+        },
+        {
+            title: "Web Development Internship",
+            org: "BeeSkilled",
+            date: "September 2026",
+            skills: ["HTML", "CSS", "JavaScript"],
+            id: "N/A",
+            link: "https://drive.google.com/file/d/1oHEu1S_O41JyBdL3gKMWygv9_cT7ybVM/view?usp=drive_link"
         }
     ],
     
