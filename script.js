@@ -31,14 +31,18 @@ const PortfolioData = {
             desc: "Designed and developed a RESTful Blog API with Django REST Framework, enabling secure CRUD operations, authentication, filtering, search, ordering, and pagination. The project demonstrates backend development, API design, and clean code organization using Python and Django.",
             tech: ["Python", "Django",  "SQLite", "Django REST Framework", "Django Filter"],
             links: { github: "https://github.com/Aryansh1727/django-blog-rest-api" },
-            demos: ["admin.png", "login.png", "pagination_page1.png", "filter_post.png"] 
+            demos: ["assets/projects/django-blog/admin.png", 
+                "assets/projects/django-blog/login.png", 
+                "assets/projects/django-blog/pagination_page1.png",
+                "assets/projects/django-blog/pagination_page2.png",
+                "assets/projects/django-blog/filter_post.png"] 
         },
         {
             title: "Real-Time Desktop Chat Application",
             desc: "A feature-rich real-time desktop chat application built with Python Sockets, Tkinter, and SQLite. Features a dual-mode dynamic theme (Dark/Light), active text keyword searching, live character constraints, and an integrated SQLite data audit utility.",
             tech: ["Python", "Sockets (TCP)", "Tkinter GUI", "SQLite3", "Multi-threading"],
             links: { github: "https://github.com/Aryansh1727/Chat-Application" },
-            demos: ["desktop-live-chat.png"] 
+            demos: ["assets/projects/chat/desktop-live-chat.png"] 
         },
         {
             title: "SkyCast Weather",
@@ -48,14 +52,21 @@ const PortfolioData = {
                 github: "https://github.com/Aryansh1727/SkyCast",
                 live: "https://skycast-online.vercel.app"
             },
-            demos: ["SkyCast-Front.png","SkyCast-output1.png","SkyCast-output2.png"]
+            demos: [
+                "assets/projects/skycast/SkyCast-Front.png",
+                "assets/projects/skycast/SkyCast-output1.png",
+                "assets/projects/skycast/SkyCast-output2.png"
+            ]
         },
         {
             title: "Password Analyzer & Cracker Simulator",
             desc: "A comprehensive cybersecurity auditing tool developed using Python and Java. It features a multi-layered password strength evaluation engine and a simulated brute-force attack module. Designed to educate users on entropy, common attack vectors, and the necessity of secure hashing algorithms in modern application infrastructure.",
             tech: ["Python", "Java"],
             links: { github: "https://github.com/Aryansh1727/Password-Strength-Analyzer-Cracker-Simulator" },
-            demos: ["analyzer-output1.png", "analyzer-output2.png"] 
+            demos: [
+                "assets/projects/analyzer/analyzer-output1.png", 
+                "assets/projects/analyzer/analyzer-output2.png"
+            ] 
         },
     ],
 
@@ -352,8 +363,8 @@ function updateFavicon() {
         document.documentElement.getAttribute("data-theme") === "light";
 
     const newFavicon = isLightTheme
-        ? "favicon-light.png"
-        : "favicon-dark.png";
+        ? "assets/favicon/favicon-light.png"
+        : "assets/favicon/favicon-dark.png";
 
     // Fade effect by temporarily removing the favicon
     favicon.removeAttribute("href");
