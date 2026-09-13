@@ -110,14 +110,17 @@ Personal-Portfolio/
 
 ## 🌐 Connect With Me
 
-**Portfolio:**  
-[aryan-personal-portfolio.vercel.app](https://aryan-personal-portfolio.vercel.app)
-
-**GitHub:**  
-[Aryansh1727](https://github.com/Aryansh1727)
-
-**LinkedIn:**  
-[Aryan Bharadwaj](https://www.linkedin.com/in/aryan-bharadwaj-403b35350/)
-
-**Email:**  
-[bharadwajaryan27@gmail.com](mailto:bharadwajaryan27@gmail.com)
+<p align="center">
+  <a href="https://aryan-personal-portfolio.vercel.app">
+    <img src="https://img.shields.io/badge/Portfolio-Visit%20Website-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio">
+  </a>
+  <a href="https://github.com/Aryansh1727">
+    <img src="https://img.shields.io/badge/GitHub-Aryansh1727-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="https://www.linkedin.com/in/aryan-bharadwaj-403b35350/">
+    <img src="https://img.shields.io/badge/LinkedIn-Aryan%20Bharadwaj-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:bharadwajaryan27@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
+  </a>
+</p>
