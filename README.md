@@ -105,3 +105,19 @@ Personal-Portfolio/
             ├── filter_post.png
             ├── login.png
             └── pagination_page1.png
+```
+---
+
+## 🌐 Connect With Me
+
+**Portfolio:**  
+[aryan-personal-portfolio.vercel.app](https://aryan-personal-portfolio.vercel.app)
+
+**GitHub:**  
+[Aryansh1727](https://github.com/Aryansh1727)
+
+**LinkedIn:**  
+[Aryan Bharadwaj](https://www.linkedin.com/in/aryan-bharadwaj-403b35350/)
+
+**Email:**  
+[bharadwajaryan27@gmail.com](mailto:bharadwajaryan27@gmail.com)
