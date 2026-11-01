@@ -101,10 +101,15 @@ Personal-Portfolio/
         │   └── desktop-live-chat.png
         │
         └── django-blog/
-            ├── admin.png
-            ├── filter_post.png
-            ├── login.png
-            └── pagination_page1.png
+        |   ├── admin.png
+        |   ├── filter_post.png
+        |   ├── login.png
+        |   └── pagination_page1.png
+        ├── smartspend/
+            ├── add-transaction.png
+            ├── budget.png
+            ├── dashboard.png
+            └── transaction-history.png
 ```
 ---
 
