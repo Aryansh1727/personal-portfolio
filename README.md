@@ -100,12 +100,13 @@ Personal-Portfolio/
         ├── chat/
         │   └── desktop-live-chat.png
         │
-        └── django-blog/
+        ├── django-blog/
         |   ├── admin.png
         |   ├── filter_post.png
         |   ├── login.png
         |   └── pagination_page1.png
-        ├── smartspend/
+        |
+        └── smartspend/
             ├── add-transaction.png
             ├── budget.png
             ├── dashboard.png
