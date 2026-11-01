@@ -1,27 +1,40 @@
 const PortfolioData = {
     name: "Aryan Bharadwaj",
-    tagline: "Computer Science student focused on Software Engineering, Web Development, and Cybersecurity.", 
-    objective: "A Computer Science student focused on Software Engineering and Cybersecurity, with hands-on experience building web applications, REST APIs, and desktop applications. Passionate about developing practical, efficient, and secure software solutions.",    interests: "Web Development, Backend Development, Cybersecurity, REST API Development, Network Programming, Automation, and exploring modern software technologies.",    github: "https://github.com/Aryansh1727",
+    tagline: "Computer Science Student | Python Developer | Aspiring Software Engineer",
+    objective: "Third-year B.Tech CSE student with hands-on experience in Python and web development. Interested in building practical applications, developing backend solutions, and creating efficient, user-focused software.",
+    interests: "Software Engineering, Backend Development, Full-Stack Development, Python Programming, Cybersecurity, REST API Development, Database Management, and AI Integration.",
     linkedin: "https://www.linkedin.com/in/aryan-bharadwaj-403b35350/",
     email: "bharadwajaryan27@gmail.com",
     
     education: [
-        { title: "Bachelors in Computer Science", school: "Gurugram University (Haryana)", meta: "2024 — 2028 | CGPA: 7.6/10" },
-        { title: "Senior Secondary", school: "Public School Darbhanga (Bihar)", meta: "2022 — 2024 | 75.6%" }
+        { 
+            title: "Bachelors in Computer Science", 
+            school: "Gurugram University (Haryana)", 
+            meta: "2024 — 2028 | CGPA: 7.6/10" },
+        { 
+            title: "Senior Secondary", 
+            school: "Public School Darbhanga (Bihar)", 
+            meta: "2022 — 2024 | 75.6%" }
     ],
 
     experience: [
         {
+            title: "Python Programming Intern",
+            company: "InternNova",
+            meta: "6 Weeks | Virtual | 2026",
+            desc: "Completed a 6-week Python programming internship, applying Python concepts through practical assignments and developing SmartSpend, a personal expense tracker using Streamlit, Pandas, and Plotly."
+        },
+        {
             title: "Web Development Intern",
             company: "BeeSkilled",
             meta: "6 Weeks | Virtual | 2026",
-            desc: "Completed a 6-week web development internship, gaining practical experience in building responsive and interactive web projects using HTML, CSS, and JavaScript."
+            desc: "Completed a 6-week web development internship, gaining hands-on experience in frontend development and building SkyCast, a weather application integrating the OpenWeather API using HTML, CSS, JavaScript, and Vercel."
         },
         {
             title: "Internshala Student Partner (ISP)",
             company: "Internshala",
             meta: "June 2026 | Hybrid",
-            desc: "Promoted Internshala's learning and internship opportunities among students, building communication, networking, and community engagement skills."
+            desc: "Represented Internshala by promoting learning resources and internship opportunities among students, strengthening communication, networking, and community engagement skills."
         }
     ],
         
@@ -68,6 +81,22 @@ const PortfolioData = {
                 "assets/projects/analyzer/analyzer-output2.png"
             ] 
         },
+        {
+            title: "SmartSpend",
+            desc: "A personal finance management dashboard built using Python and Streamlit. It enables users to track income and expenses, monitor budgets, and analyze spending patterns through interactive visualizations using Pandas and Plotly, helping them make smarter financial decisions.",
+            tech: ["Python", "Streamlit", "Pandas", "Plotly"],
+            title: "SmartSpend",
+            links: {
+                github: "https://github.com/Aryansh1727/Smart-Expense-Tracker",
+                live: "https://smart-expense-tracker-aryan.streamlit.app"
+            },
+            demos: [
+                "assets/projects/smartspend/dashboard.png",
+                "assets/projects/smartspend/add-transaction.png",
+                "assets/projects/smartspend/budget.png",
+                "assets/projects/smartspend/transaction-history.png"
+            ]
+        },
     ],
 
     certificates: [
@@ -83,17 +112,27 @@ const PortfolioData = {
             title: "Web Development Internship",
             org: "BeeSkilled",
             date: "September 2026",
-            skills: ["HTML", "CSS", "JavaScript"],
+            skills: ["HTML", "CSS", "JavaScript", "API", "Git","GitHub", "Vercel"],
             id: "N/A",
             link: "https://drive.google.com/file/d/1oHEu1S_O41JyBdL3gKMWygv9_cT7ybVM/view?usp=drive_link"
+        },
+        {
+            title: "Python Programming Internship",
+            org: "InternNova",
+            date: "October 2026",
+            skills: ["Python","Pandas","Streamlit","Plotly","Git","GitHub"],
+            id: "IN/26/PP5866",
+            link: "https://drive.google.com/file/d/1EVZS-Hh_gI-OSXlH1to4cC-fnrqm7L6L/view?usp=drive_link"
         }
     ],
     
     categorizedSkills: {
-        "Languages": ["C", "Python", "Java", "JavaScript", "HTML", "CSS"],
-        "Frameworks": ["Django", "Django REST Framework"],
+        "Languages": ["C", "Python", "Java", "JavaScript"],
+        "Frontend": ["HTML", "CSS"],
+        "Backend & Frameworks": ["Django", "Django REST Framework"],
         "Databases": ["SQLite", "PostgreSQL"],
-        "Tools": ["GitHub", "VS Code", "Linux"]
+        "Data & Visualization": ["Pandas", "Plotly"],
+        "Tools & Platform": ["Git", "GitHub", "VS Code", "Streamlit", "Vercel"]
     },
     
     softSkills: ["Problem Solving", "Critical Thinking", "Team Collaboration", "Communication"],
